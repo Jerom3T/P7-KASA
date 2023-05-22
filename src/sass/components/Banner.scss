@@ -1,6 +1,11 @@
-
 .banner {
     position: relative;
+    
+    }
+    
+    .banner img {
+    border-radius: 25px;
+    width: 100%;
     }
     
     .text {
@@ -9,5 +14,5 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 25px;
+    font-size: 48px;
     }
