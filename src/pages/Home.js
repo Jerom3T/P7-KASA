@@ -1,12 +1,13 @@
-import React from "react";
-import Navigation from "../components/Navigation";
-import Banner from "../components/Banner";
+
+import React from 'react';
+import Header from '../components/Header';
+import Main from '../components/Main';
 
 const Home = () => {
   return (
     <div>
-      <Navigation />,
-      <Banner />
+      <Header />
+      <Main />
     </div>
   );
 };

@@ -1,0 +1,57 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0px;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: #ff6060;
+    padding: 20px;
+    font-size: 24px;
+
+    li {
+      transition: 0.2s;
+      cursor: pointer;
+
+      &:hover {
+        color: #ff6060;
+      }
+    }
+  }
+
+  .nav-active {
+    position: relative;
+
+    &::after {
+      content: "";
+      height: 4px;
+      width: 0;
+      background: #ff6060;
+      position: absolute;
+      border-radius: 10px;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-animation: anim 0.3s ease forwards;
+      animation: anim 0.6s ease forwards;
+
+      @-webkit-keyframes anim {
+        to {
+          width: 100%;
+        }
+      }
+      @keyframes anim {
+        to {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
