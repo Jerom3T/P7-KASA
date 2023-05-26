@@ -1,6 +1,7 @@
 .banner {
     position: relative;
     margin-bottom: 43px;
+    margin-inline: 30px;
   }
   
   .banner img {
@@ -8,6 +9,7 @@
     width: 100%;
     object-fit: cover;
     filter: contrast(150%) grayscale(50%) brightness(80%);
+    transform: scale(1);
   }
   
   .text {
@@ -16,6 +18,19 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 48px;
+    font-size: 42px;
+  }
+  
+  .banner2 {
+    position: relative;
+    margin-inline: 30px;
+
+  }
+  
+  .banner2 img {
+    border-radius: 25px;
+    width: 100%;
+    object-fit: cover;
+    filter: contrast(150%) grayscale(50%) brightness(80%);
   }
   
