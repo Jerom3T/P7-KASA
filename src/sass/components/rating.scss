@@ -1,0 +1,17 @@
+.rating {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 20px;
+  
+    span {
+      color: #ff6060;
+      font-size: 24px;
+    }
+  
+    &:last-child {
+      span {
+        color: grey;
+      }
+    }
+  }
+  
