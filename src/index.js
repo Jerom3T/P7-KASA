@@ -5,8 +5,9 @@ import './sass/index.scss';
 
 const rootElement = document.getElementById('root');
 
-ReactDOM.createRoot(rootElement).render(
+ReactDOM.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
+  rootElement
 );

@@ -25,7 +25,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: flex-start; // Ajout de cette règle pour aligner les tags à gauche
+    justify-content: flex-start;
     margin-bottom: 20px;
 
     .tag {
@@ -34,6 +34,22 @@
       padding: 5px;
       margin: 10px;
       border-radius: 25px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+
+    .title-container {
+      margin-bottom: 0;
+
+      h2 {
+        margin-bottom: 0;
+      }
+    }
+
+    .tag-container {
+      margin-bottom: 10px;
     }
   }
 }
@@ -50,5 +66,9 @@
     align-items: center;
     margin-left: 20px;
 
+    @media screen and (max-width: 768px) {
+      margin-left: 0;
+      margin-top: 20px;
+    }
   }
 }

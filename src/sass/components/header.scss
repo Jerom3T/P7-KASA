@@ -2,8 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 0px;
-
+  padding: 20px 0;
 
   ul {
     display: flex;
@@ -14,8 +13,8 @@
   a {
     text-decoration: none;
     color: #ff6060;
-    padding: 20px;
-    font-size: 24px;
+    padding: 10px;
+    font-size: 18px;
 
     li {
       transition: 0.2s;
@@ -37,7 +36,7 @@
       background: #ff6060;
       position: absolute;
       border-radius: 10px;
-      bottom: 10px;
+      bottom: 5px;
       left: 50%;
       transform: translateX(-50%);
       -webkit-animation: anim 0.3s ease forwards;

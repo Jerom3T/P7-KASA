@@ -1,42 +1,26 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 
-const Collapse = ({ title, content }) => {
-  const [isCollapsed, setIsCollapsed] = useState(false);
-
+const Collapse = ({ title, content, activeIndex, setActiveIndex, index, isList }) => {
   const handleToggleCollapse = () => {
-    setIsCollapsed(!isCollapsed);
+    setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
-    <div className={`collapse ${isCollapsed ? 'collapsed' : ''}`}>
+    <div className={`collapse ${activeIndex === index ? 'expanded' : 'collapsed'}`}>
       <div className="collapse-header" onClick={handleToggleCollapse}>
         <div className="collapse-title">{title}</div>
-        <div className="collapse-arrow">&#9662;</div>
+        <div className="collapse-arrow">{activeIndex === index ? '▼' : '▲'}</div>
       </div>
-      {isCollapsed && (
+      {activeIndex === index && (
         <div className="collapse-content">
-          {Array.isArray(content) ? (
-            <ul>
-              {content.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          ) : (
-            content
-          )}
+          {isList 
+            ? <ul>{Array.isArray(content) && content.map((item, i) => <li key={i}>{item}</li>)}</ul> 
+            : (Array.isArray(content) ? content.map((item, i) => <p key={i}>{item}</p>) : <p>{content}</p>)
+          }
         </div>
       )}
     </div>
   );
-};
-
-Collapse.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.arrayOf(PropTypes.string),
-  ]).isRequired,
 };
 
 export default Collapse;

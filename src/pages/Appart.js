@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import accommodationsData from "../data/data.json";
 import Header from "../components/Header";
@@ -10,6 +10,8 @@ import Collapse from "../components/Collapse";
 
 const Appart = () => {
   const { id } = useParams();
+  const [activeIndex, setActiveIndex] = useState(null);
+
   const accommodation = accommodationsData.find((item) => item.id === id);
 
   if (!accommodation) {
@@ -32,8 +34,21 @@ const Appart = () => {
         </div>
       </div>
       <div className="collapse-container">
-        <Collapse title="Description" content={accommodation.description} />
-        <Collapse title="Équipements" content={accommodation.equipments} />
+        <Collapse
+          title="Description"
+          content={accommodation.description}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+          index={0}
+        />
+        <Collapse
+          title="Équipements"
+          content={accommodation.equipments}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+          index={1}
+          isList={true}
+        />
       </div>
     </div>
   );
