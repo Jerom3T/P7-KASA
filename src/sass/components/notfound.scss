@@ -8,21 +8,25 @@
   }
   
   .notFound_infos_title {
-    font-size: 48px;
-    font-weight: bold;
+    font-size: 288px;
+    font-weight: 700;
+    color: #ff6060;
   }
   
   .notFound_infos_content {
-    font-size: 24px;
+    font-size: 36px;
+    color: #ff6060;
   }
   
   .notFound_infos_return {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 182px;
+    margin-bottom: 20px;
     padding: 10px 20px;
-    background-color: #ff6060;
-    color: #fff;
-    text-decoration: none;
+    color: #ff6060;
+    text-decoration: underline;
     font-weight: bold;
-  }
+    font-size: 18px;
+}
+
   

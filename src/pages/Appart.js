@@ -8,6 +8,7 @@ import HostInfo from "../components/HostInfo";
 import Rating from "../components/Rating";
 import Collapse from "../components/Collapse";
 import Footer from '../components/Footer';
+import NotFound from './NotFound';
 
 
 const Appart = () => {
@@ -17,7 +18,7 @@ const Appart = () => {
   const accommodation = accommodationsData.find((item) => item.id === id);
 
   if (!accommodation) {
-    return <div>Logement non trouvé</div>;
+    return <NotFound/>;
   }
 
   return (
