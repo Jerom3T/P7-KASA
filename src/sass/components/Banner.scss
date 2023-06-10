@@ -30,6 +30,13 @@
       font-size: 24px;
     }
   }
+
+  @media screen and (max-width: 500px) {
+    img {
+      max-width: 336px;
+      max-height: 223px;
+    }
+  }
 }
 
 .banner2 {

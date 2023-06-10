@@ -1,9 +1,18 @@
 .collapse-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   margin-top: 20px;
+  width: 100%;
+
+  &.about-page {
+    justify-content: center;
+  }
+
+  &.appart-page {
+    justify-content: space-between;
+  }
 
   .collapse {
     display: flex;
@@ -11,15 +20,15 @@
     width: 100%;
     margin-bottom: 20px;
     background-color: #ff6060;
-    border-radius: 15px;
+    border-radius: 5px;
 
     &.column-layout {
       flex-direction: column;
-      width: 100%;
+      width: 75%;
     }
-    
+
     &.row-layout {
-      flex-direction:column;
+      flex-direction: column;
       width: 45%;
     }
 
@@ -60,8 +69,8 @@
       margin-top: 10px;
       padding: 10px;
       background-color: #f6f6f6;
-      border-bottom-left-radius: 15px;
-      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
       color: #ff6060;
       flex-direction: column;
     }
@@ -76,15 +85,26 @@
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    justify-content: flex-start;
 
     .collapse {
       width: 100%;
+      
     }
   }
 
   @media screen and (max-width: 992px) {
     .collapse {
       width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .collapse {
+      width: 100%;
+      flex-grow: 1;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 }

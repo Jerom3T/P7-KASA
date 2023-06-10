@@ -1,11 +1,12 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  justify-content: space-around;
+  justify-content: center;
+  align-items: start;
   gap: 60px;
+  padding: 50px;
   background-color: #F7F7F7;
   border-radius: 25px;
-  padding: 50px 56px;
 
   @media screen and (max-width: 768px) {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -20,6 +21,7 @@
   margin: 10px;
   border: 1px solid #ccc;
   cursor: pointer;
+  overflow: hidden; 
 }
 
 .accommodation-image:hover {

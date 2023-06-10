@@ -1,27 +1,38 @@
 *, ::before, ::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1440px;
+  padding-top: 0;
+  margin: 0 auto;  
+  @media screen and (max-width: 500px) {
+    padding-top: 20px;
+    margin-inline: 30px;
   }
-  
-  body {
-    max-width: 1440px;
-    padding-top: 0;
-    margin: 0 auto;  
-    @media screen and (max-width: 500px) {
-      padding-top: 20px;
-      margin-inline: 30px;
-    }
+
+  @media screen and (max-width: 1500px) {
+    margin-left: 20px;
+    margin-right: 20px;
   }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  li {
-    list-style: none;
-  }
-  
+}
+
+.footer {
+  margin-top: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}

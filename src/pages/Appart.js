@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import accommodationsData from "../data/data.json";
 import Header from "../components/Header";
@@ -6,20 +6,32 @@ import Carousel from "../components/Carousel";
 import AccommodationDetails from "../components/AccommodationDetails";
 import HostInfo from "../components/HostInfo";
 import Rating from "../components/Rating";
-import Collapse from "../components/Collapse";
-import Footer from '../components/Footer';
-import NotFound from './NotFound';
-
+import CollapseContainer from "../components/CollapseContainer";
+import Footer from "../components/Footer";
+import NotFound from "./NotFound";
 
 const Appart = () => {
   const { id } = useParams();
-  const [activeIndex, setActiveIndex] = useState(null);
-
   const accommodation = accommodationsData.find((item) => item.id === id);
 
   if (!accommodation) {
-    return <NotFound/>;
+    return <NotFound />;
   }
+
+  const data = [
+    {
+      title: "Description",
+      content: accommodation.description,
+      isList: false,
+      layout: "row",
+    },
+    {
+      title: "Équipements",
+      content: accommodation.equipments,
+      isList: true,
+      layout: "row",
+    },
+  ];
 
   return (
     <div>
@@ -36,26 +48,8 @@ const Appart = () => {
           <Rating rating={accommodation.rating} />
         </div>
       </div>
-      <div className="collapse-container">
-        <Collapse
-          title="Description"
-          content={accommodation.description}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-          index={0}
-          layout="row" 
-        />
-        <Collapse
-          title="Équipements"
-          content={accommodation.equipments}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-          index={1}
-          isList={true}
-          layout="row" 
-        />
-        <Footer />
-      </div>
+      <CollapseContainer data={data} isAboutPage={false} />
+      <Footer />
     </div>
   );
 };
