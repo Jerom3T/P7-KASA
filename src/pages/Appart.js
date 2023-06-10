@@ -40,6 +40,7 @@ const Appart = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
           index={0}
+          layout="row" // Ajout de la prop layout
         />
         <Collapse
           title="Équipements"
@@ -48,6 +49,7 @@ const Appart = () => {
           setActiveIndex={setActiveIndex}
           index={1}
           isList={true}
+          layout="row" // Ajout de la prop layout
         />
       </div>
     </div>

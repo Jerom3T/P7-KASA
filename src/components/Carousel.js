@@ -32,7 +32,7 @@ const Carousel = ({ pictures }) => {
           />
         </div>
       ))}
-      {currentIndex !== null && (
+      {pictures.length > 1 && currentIndex !== null && (
         <>
           <button className="carousel-btn prev-btn" onClick={handlePrev}>
             <img src={chevronLeft} alt="Chevron Left" />

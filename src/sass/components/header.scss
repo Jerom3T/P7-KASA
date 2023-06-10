@@ -2,19 +2,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 57px 0;
 
   ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 57px;
+
   }
 
   a {
     text-decoration: none;
     color: #ff6060;
     padding: 10px;
-    font-size: 18px;
+    font-size: 22px;
 
     li {
       transition: 0.2s;
@@ -31,7 +33,7 @@
 
     &::after {
       content: "";
-      height: 4px;
+      height: 2px;
       width: 0;
       background: #ff6060;
       position: absolute;

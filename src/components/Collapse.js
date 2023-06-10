@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Collapse = ({ title, content, activeIndex, setActiveIndex, index, isList }) => {
+const Collapse = ({ title, content, activeIndex, setActiveIndex, index, isList, layout }) => {
   const handleToggleCollapse = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
-    <div className={`collapse ${activeIndex === index ? 'expanded' : 'collapsed'}`}>
+    <div className={`collapse ${layout === 'row' ? 'row-layout' : 'column-layout'} ${activeIndex === index ? 'expanded' : 'collapsed'}`}>
       <div className="collapse-header" onClick={handleToggleCollapse}>
         <div className="collapse-title">{title}</div>
         <div className="collapse-arrow">{activeIndex === index ? '▼' : '▲'}</div>
