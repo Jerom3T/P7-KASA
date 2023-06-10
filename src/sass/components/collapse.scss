@@ -8,6 +8,7 @@
   .collapse {
     display: flex;
     flex-direction: column;
+    width: 100%;
     margin-bottom: 20px;
     background-color: #ff6060;
     border-radius: 15px;
@@ -18,7 +19,7 @@
     }
     
     &.row-layout {
-      flex-direction: row;
+      flex-direction:column;
       width: 45%;
     }
 
@@ -26,6 +27,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      width: 100%;
       cursor: pointer;
       padding: 10px;
 
@@ -35,15 +37,21 @@
         align-items: center;
       }
 
+      .collapse-arrow-container {
+        margin-left: auto;
+      }
+
       .collapse-arrow {
-        color: #f6f6f6;
-        font-size: 20px;
-        transition: transform 0.3s;
-        transform: rotate(180deg);
+        width: 24px;
+        height: 13px;
+        &.up-arrow {
+        }
+        &.down-arrow {
+        }
       }
 
       &.expanded .collapse-arrow {
-        transform: rotate(0deg);
+        transform: rotate(180deg);
       }
     }
 
@@ -55,11 +63,12 @@
       border-bottom-left-radius: 15px;
       border-bottom-right-radius: 15px;
       color: #ff6060;
+      flex-direction: column;
     }
 
     &.expanded {
       .collapse-content {
-        display: block;
+        display: flex;
         margin-top: 0;
       }
     }

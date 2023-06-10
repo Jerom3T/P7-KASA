@@ -7,6 +7,8 @@ import AccommodationDetails from "../components/AccommodationDetails";
 import HostInfo from "../components/HostInfo";
 import Rating from "../components/Rating";
 import Collapse from "../components/Collapse";
+import Footer from '../components/Footer';
+
 
 const Appart = () => {
   const { id } = useParams();
@@ -51,6 +53,7 @@ const Appart = () => {
           isList={true}
           layout="row" // Ajout de la prop layout
         />
+        <Footer />
       </div>
     </div>
   );

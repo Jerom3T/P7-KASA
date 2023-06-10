@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import Banner2 from '../components/Banner2';
 import Collapse from '../components/Collapse';
+import Footer from '../components/Footer';
 
 const About = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -48,6 +49,7 @@ const About = () => {
             index={3}
             layout="column" // Ajout de la prop layout
           />
+          <Footer />
         </div>
       </div>
     </div>
