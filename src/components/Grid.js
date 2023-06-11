@@ -12,8 +12,7 @@ const Grid = () => {
           <NavLink
             key={accommodation.id}
             to={`/details/${accommodation.id}`}
-            className="accommodation-image"
-            activeClassName="active"
+            className={`accommodation-image ${window.location.pathname === `/details/${accommodation.id}` ? 'active' : ''}`}
           >
             <img src={accommodation.cover} alt="Couverture" />
             <div className="accommodation-info">

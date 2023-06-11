@@ -9,18 +9,16 @@ const Header = () => {
       <ul>
         <li>
           <NavLink
-            exact={Boolean("true")}
             to="/"
-            activeClassName="nav-active"
+            className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}
           >
             Accueil
           </NavLink>
         </li>
         <li>
           <NavLink
-            exact={Boolean("true")}
             to="/about"
-            activeClassName="nav-active"
+            className={window.location.pathname === "/about" ? "nav-link active" : "nav-link"}
           >
             À Propos
           </NavLink>
