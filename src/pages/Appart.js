@@ -6,13 +6,15 @@ import Carousel from "../components/Carousel";
 import AccommodationDetails from "../components/AccommodationDetails";
 import HostInfo from "../components/HostInfo";
 import Rating from "../components/Rating";
-import CollapseContainer from "../components/CollapseContainer";
+import Collapse from "../components/Collapse";
 import Footer from "../components/Footer";
 import NotFound from "./NotFound";
 
 const Appart = () => {
   const { id } = useParams();
   const accommodation = accommodationsData.find((item) => item.id === id);
+
+  const [activeIndex, setActiveIndex] = React.useState(null);
 
   if (!accommodation) {
     return <NotFound />;
@@ -37,6 +39,7 @@ const Appart = () => {
     <div>
       <Header />
       <Carousel pictures={accommodation.pictures} />
+      {/* ... */}
       <div className="accommodation-details-container">
         <AccommodationDetails
           title={accommodation.title}
@@ -48,7 +51,21 @@ const Appart = () => {
           <Rating rating={accommodation.rating} />
         </div>
       </div>
-      <CollapseContainer data={data} isAboutPage={false} />
+      <div className="collapse-container appart-page">
+        {" "}
+        {data.map((collapse, index) => (
+          <Collapse
+            key={index}
+            title={collapse.title}
+            content={collapse.content}
+            activeIndex={activeIndex}
+            setActiveIndex={setActiveIndex}
+            index={index}
+            isList={collapse.isList}
+            layout={collapse.layout}
+          />
+        ))}
+      </div>
       <Footer />
     </div>
   );

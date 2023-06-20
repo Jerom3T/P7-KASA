@@ -1,32 +1,54 @@
 .notFound {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .notFound_infos {
-    margin-top: 20px;
-  }
-  
-  .notFound_infos_title {
-    font-size: 288px;
-    font-weight: 700;
-    color: #ff6060;
-  }
-  
-  .notFound_infos_content {
-    font-size: 36px;
-    color: #ff6060;
-  }
-  
-  .notFound_infos_return {
-    display: inline-block;
-    margin-top: 182px;
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    color: #ff6060;
-    text-decoration: underline;
-    font-weight: bold;
-    font-size: 18px;
+  text-align: center;
+  padding: 20px;
 }
 
-  
+.notFound_infos {
+  margin-top: 20px;
+}
+
+.notFound_infos_title {
+  font-size: 288px;
+  font-weight: 700;
+  color: #ff6060;
+}
+
+.notFound_infos_content {
+  font-size: 36px;
+  color: #ff6060;
+}
+
+.notFound_infos_return {
+  display: inline-block;
+  margin-top: 182px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  color: #ff6060;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 18px;
+}
+@media screen and (max-width: 675px) {
+
+
+  .notFound_infos_title {
+      font-size: 150px; 
+  }
+
+  .text {
+      font-size: 15px;
+      white-space: pre-line;
+  }
+}
+@media screen and (max-width: 375px) {
+ 
+
+  .notFound_infos_title {
+      font-size: 48px; 
+  }
+
+  .text {
+      font-size: 15px;
+      white-space: pre-line;
+  }
+}

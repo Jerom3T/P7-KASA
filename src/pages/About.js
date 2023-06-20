@@ -20,7 +20,7 @@ const About = () => {
             activeIndex={activeIndex}
             setActiveIndex={setActiveIndex}
             index={0}
-            layout="column" // Ajout de la prop layout
+            layout="column" 
           />
 
           <Collapse
@@ -29,7 +29,7 @@ const About = () => {
             activeIndex={activeIndex}
             setActiveIndex={setActiveIndex}
             index={1}
-            layout="column" // Ajout de la prop layout
+            layout="column" 
           />
 
           <Collapse
@@ -38,7 +38,7 @@ const About = () => {
             activeIndex={activeIndex}
             setActiveIndex={setActiveIndex}
             index={2}
-            layout="column" // Ajout de la prop layout
+            layout="column" 
           />
 
           <Collapse
@@ -47,11 +47,11 @@ const About = () => {
             activeIndex={activeIndex}
             setActiveIndex={setActiveIndex}
             index={3}
-            layout="column" // Ajout de la prop layout
+            layout="column" 
           />
-          <Footer />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

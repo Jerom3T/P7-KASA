@@ -27,11 +27,20 @@
     }
 
     @media screen and (max-width: 500px) {
-      font-size: 18px;  // Adjust the font size for smaller screens
+      font-size: 18px;
     }
 
     @media screen and (min-width: 768px) {
-      font-size: 24px;  // Adjust the font size for larger screens
+      font-size: 24px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 255px;
+
+    .carousel-btn img {
+      height: 20px;
+      width: auto;
     }
   }
 
