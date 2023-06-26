@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import accommodationsData from "../data/data.json";
 import Header from "../components/Header";
 import Carousel from "../components/Carousel";
@@ -8,7 +8,6 @@ import HostInfo from "../components/HostInfo";
 import Rating from "../components/Rating";
 import Collapse from "../components/Collapse";
 import Footer from "../components/Footer";
-import NotFound from "./NotFound";
 
 const Appart = () => {
   const { id } = useParams();
@@ -17,7 +16,7 @@ const Appart = () => {
   const [activeIndex, setActiveIndex] = React.useState(null);
 
   if (!accommodation) {
-    return <NotFound />;
+    return <Navigate to='/404'/>;
   }
 
   const data = [
